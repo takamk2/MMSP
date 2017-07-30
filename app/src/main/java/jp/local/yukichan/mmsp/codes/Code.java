@@ -1,5 +1,7 @@
 package jp.local.yukichan.mmsp.codes;
 
+import android.widget.TextView;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.ConcurrentHashMap;
@@ -29,16 +31,21 @@ public class Code {
 
     private final ConcurrentHashMap<Degree, BaseNote> mNotes = new ConcurrentHashMap();
 
-    private Code(String codeName, BaseNote first, BaseNote third, BaseNote fifth, BaseNote seventh) {
+    private Code(String codeName, BaseNote rootNote, BaseNote thirdNote, BaseNote fifthNote,
+                 BaseNote seventhNote) {
         mCodeName = codeName;
-        mNotes.put(Degree.Root, first);
-        mNotes.put(Degree.Third, third);
-        mNotes.put(Degree.Fifth, fifth);
-        mNotes.put(Degree.Seventh, seventh);
+        mNotes.put(Degree.Root, rootNote);
+        mNotes.put(Degree.Third, thirdNote);
+        mNotes.put(Degree.Fifth, fifthNote);
+        mNotes.put(Degree.Seventh, seventhNote);
     }
 
     public String getCodeName() {
         return mCodeName;
+    }
+
+    public String getCodeCategory() {
+        return "T"; // TODO: スケールを元にコードのカテゴリを返す
     }
 
     public String getTensions() {

@@ -1,5 +1,7 @@
 package jp.local.yukichan.mmsp.codes;
 
+import android.widget.TextView;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.ConcurrentHashMap;

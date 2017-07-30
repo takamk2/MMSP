@@ -1,0 +1,24 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="16dp"
+    tools:context="jp.local.yukichan.mmsp.fragments.DisplaySelectedScaleFragment">
+
+    <TextView
+        android:id="@+id/tv_scale_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:textSize="32sp" />
+
+    <ImageView
+        android:id="@+id/iv_scale_selector"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:clickable="true"
+        android:src="@drawable/ic_arrow_drop_down" />
+
+</RelativeLayout>

@@ -10,6 +10,6 @@
         android:layout_width="match_parent"
         android:headerDividersEnabled="true"
         android:layout_height="wrap_content"
-        android:divider="@drawable/divider" />
+        android:divider="@drawable/divider_horizontal" />
 
 </LinearLayout>

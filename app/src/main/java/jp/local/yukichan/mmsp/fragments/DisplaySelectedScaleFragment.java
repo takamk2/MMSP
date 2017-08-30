@@ -1,5 +1,6 @@
 package jp.local.yukichan.mmsp.fragments;
 
+import android.content.Context;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.DialogFragment;
@@ -16,6 +17,7 @@ import jp.local.yukichan.mmsp.R;
 import jp.local.yukichan.mmsp.notes.BaseNote;
 import jp.local.yukichan.mmsp.scales.Scale;
 import jp.local.yukichan.mmsp.scales.ScaleConstituent;
+import timber.log.Timber;
 
 public class DisplaySelectedScaleFragment extends Fragment {
 
@@ -34,8 +36,9 @@ public class DisplaySelectedScaleFragment extends Fragment {
     }
 
     @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
+    public void onAttach(Context context) {
+        super.onAttach(context);
+        Timber.i("onAttach called");
     }
 
     @Override

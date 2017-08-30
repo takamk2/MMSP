@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="white_key_width">48dp</dimen>
+    <dimen name="black_key_width">40dp</dimen>
+    <dimen name="white_key_height">160dp</dimen>
+    <dimen name="black_key_height">90dp</dimen>
+</resources>

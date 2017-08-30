@@ -8,9 +8,7 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.animation.Animation;
 import android.widget.BaseAdapter;
-import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
 
@@ -18,18 +16,33 @@ import java.util.ArrayList;
 import java.util.List;
 
 import jp.local.yukichan.mmsp.R;
+import jp.local.yukichan.mmsp.activities.MainActivity;
 import jp.local.yukichan.mmsp.codes.Code;
 import jp.local.yukichan.mmsp.codes.CodeConstituent;
 import jp.local.yukichan.mmsp.notes.BaseNote;
+import timber.log.Timber;
 
 /**
  * A simple {@link Fragment} subclass.
  */
 public class DetectedCodeFragment extends Fragment {
 
+    private final MainActivity.OnModeChangedListener mOnModeChangedListener
+            = new OnModeChangedListenerImpl();
 
     private ListView mLvDetectedCodeList;
     private DetectedCodeListAdapter mDetectedCodeListAdapter;
+
+    private MainActivity mActivity;
+
+    @Override
+    public void onAttach(Context context) {
+        super.onAttach(context);
+        Timber.i("onAttach called");
+        if (context instanceof MainActivity) {
+            mActivity = (MainActivity) context;
+        }
+    }
 
     public DetectedCodeFragment() {
         // Required empty public constructor
@@ -52,6 +65,14 @@ public class DetectedCodeFragment extends Fragment {
                 .setRootNote(BaseNote.E)
                 .setCodeConstituent(CodeConstituent.MajorSeventh)
                 .build());
+        codes.add(new Code.Builder()
+                .setRootNote(BaseNote.Fs)
+                .setCodeConstituent(CodeConstituent.MajorSeventh)
+                .build());
+        codes.add(new Code.Builder()
+                .setRootNote(BaseNote.A)
+                .setCodeConstituent(CodeConstituent.MajorSeventh)
+                .build());
         mDetectedCodeListAdapter.setCodes(codes);
     }
 
@@ -63,11 +84,17 @@ public class DetectedCodeFragment extends Fragment {
 
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
         mLvDetectedCodeList = (ListView) view.findViewById(R.id.lv_detected_code_list);
         mLvDetectedCodeList.setAdapter(mDetectedCodeListAdapter);
-        super.onViewCreated(view, savedInstanceState);
     }
 
+    @Override
+    public void onDestroyView() {
+        super.onDestroyView();
+    }
+
+    /* private methods -------------------------------------------------------------------------- */
     private class DetectedCodeListAdapter extends BaseAdapter {
 
         private final LayoutInflater mmInflator;
@@ -115,6 +142,14 @@ public class DetectedCodeFragment extends Fragment {
         public void setCodes(List<Code> codes) {
             mmCodes.clear();
             mmCodes.addAll(codes);
+        }
+    }
+
+    /* inner classes ---------------------------------------------------------------------------- */
+    private class OnModeChangedListenerImpl implements MainActivity.OnModeChangedListener {
+
+        @Override
+        public void onModeChanged(MainActivity.Mode mode) {
         }
     }
 }

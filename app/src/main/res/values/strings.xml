@@ -3,4 +3,10 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string-array name="spinner_values">
+        <item>C major scale</item>
+        <item>D major scale</item>
+        <item>E major scale</item>
+    </string-array>
 </resources>

@@ -18,6 +18,7 @@ import jp.local.yukichan.mmsp.R;
 import jp.local.yukichan.mmsp.notes.BaseNote;
 import jp.local.yukichan.mmsp.scales.Scale;
 import jp.local.yukichan.mmsp.scales.ScaleConstituent;
+import timber.log.Timber;
 
 /**
  * Created by takamk2 on 17/07/30.
@@ -34,6 +35,12 @@ public class ScaleSelectorDialogFragment extends DialogFragment {
     static ScaleSelectorDialogFragment newInstance() {
         ScaleSelectorDialogFragment fragment = new ScaleSelectorDialogFragment();
         return fragment;
+    }
+
+    @Override
+    public void onAttach(Context context) {
+        super.onAttach(context);
+        Timber.i("onAttach called");
     }
 
     @Override

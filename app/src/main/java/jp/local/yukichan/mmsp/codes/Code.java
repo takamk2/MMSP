@@ -6,6 +6,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.ConcurrentHashMap;
 
+import jp.local.yukichan.mmsp.codes.CodeConstituent.Tension;
 import jp.local.yukichan.mmsp.notes.BaseNote;
 
 /**
@@ -15,6 +16,10 @@ import jp.local.yukichan.mmsp.notes.BaseNote;
  */
 
 public class Code {
+
+    public boolean canSetTension(Tension tension) {
+        return mConstituent.canSetTension(tension);
+    }
 
     enum Degree {
         Root,
@@ -28,12 +33,14 @@ public class Code {
     }
 
     private final String mCodeName;
+    private final CodeConstituent mConstituent;
 
     private final ConcurrentHashMap<Degree, BaseNote> mNotes = new ConcurrentHashMap();
 
-    private Code(String codeName, BaseNote rootNote, BaseNote thirdNote, BaseNote fifthNote,
+    private Code(String codeName, CodeConstituent constituent, BaseNote rootNote, BaseNote thirdNote, BaseNote fifthNote,
                  BaseNote seventhNote) {
         mCodeName = codeName;
+        mConstituent = constituent;
         mNotes.put(Degree.Root, rootNote);
         mNotes.put(Degree.Third, thirdNote);
         mNotes.put(Degree.Fifth, fifthNote);
@@ -92,7 +99,7 @@ public class Code {
             if (codeName == null) {
                 codeName = notes.get(0).displayName + mmConstituent.displayName;
             }
-            return new Code(codeName, notes.get(0), notes.get(1), notes.get(2), notes.get(3));
+            return new Code(codeName, mmConstituent, notes.get(0), notes.get(1), notes.get(2), notes.get(3));
         }
     }
 }

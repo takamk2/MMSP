@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_alignParentTop="true"
+    android:layout_gravity="bottom"
+    android:layout_toEndOf="@+id/key1">
+
+    <ImageView
+        android:id="@+id/key1"
+        android:layout_width="@dimen/white_key_width"
+        android:layout_height="@dimen/white_key_height"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:clickable="true"
+        android:scaleType="fitXY"
+        android:src="@drawable/whitekey" />
+
+    <ImageView
+        android:id="@+id/key3"
+        android:layout_width="@dimen/white_key_width"
+        android:layout_height="@dimen/white_key_height"
+        android:layout_alignParentTop="true"
+        android:layout_toEndOf="@+id/key1"
+        android:clickable="true"
+        android:scaleType="fitXY"
+        android:src="@drawable/whitekey" />
+
+    <ImageView
+        android:id="@+id/key5"
+        android:layout_width="@dimen/white_key_width"
+        android:layout_height="@dimen/white_key_height"
+        android:layout_alignParentTop="true"
+        android:layout_toEndOf="@+id/key3"
+        android:clickable="true"
+        android:scaleType="fitXY"
+        android:src="@drawable/whitekey" />
+
+    <ImageView
+        android:id="@+id/key6"
+        android:layout_width="@dimen/white_key_width"
+        android:layout_height="@dimen/white_key_height"
+        android:layout_alignParentTop="true"
+        android:layout_toEndOf="@+id/key5"
+        android:clickable="true"
+        android:scaleType="fitXY"
+        android:src="@drawable/whitekey" />
+
+    <ImageView
+        android:id="@+id/key12"
+        android:layout_width="@dimen/white_key_width"
+        android:layout_height="@dimen/white_key_height"
+        android:layout_alignParentTop="true"
+        android:layout_toEndOf="@+id/key10"
+        android:clickable="true"
+        android:scaleType="fitXY"
+        android:src="@drawable/whitekey" />
+
+    <ImageView
+        android:id="@+id/key10"
+        android:layout_width="@dimen/white_key_width"
+        android:layout_height="@dimen/white_key_height"
+        android:layout_alignParentTop="true"
+        android:layout_toEndOf="@+id/key8"
+        android:clickable="true"
+        android:scaleType="fitXY"
+        android:src="@drawable/whitekey" />
+
+    <ImageView
+        android:id="@+id/key8"
+        android:layout_width="@dimen/white_key_width"
+        android:layout_height="@dimen/white_key_height"
+        android:layout_alignParentTop="true"
+        android:layout_toEndOf="@+id/key6"
+        android:clickable="true"
+        android:scaleType="fitXY"
+        android:src="@drawable/whitekey" />
+
+    <ImageView
+        android:id="@+id/key7"
+        android:layout_width="@dimen/black_key_width"
+        android:layout_height="@dimen/black_key_height"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="28dp"
+        android:layout_toEndOf="@+id/key5"
+        android:clickable="true"
+        android:scaleType="fitXY"
+        android:src="@drawable/blackkey" />
+
+    <ImageView
+        android:id="@+id/key9"
+        android:layout_width="@dimen/black_key_width"
+        android:layout_height="@dimen/black_key_height"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="8dp"
+        android:layout_toEndOf="@+id/key7"
+        android:clickable="true"
+        android:scaleType="fitXY"
+        android:src="@drawable/blackkey" />
+
+    <ImageView
+        android:id="@+id/key11"
+        android:layout_width="@dimen/black_key_width"
+        android:layout_height="@dimen/black_key_height"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="6dp"
+        android:layout_toEndOf="@+id/key9"
+        android:clickable="true"
+        android:scaleType="fitXY"
+        android:src="@drawable/blackkey" />
+
+    <ImageView
+        android:id="@+id/key4"
+        android:layout_width="@dimen/black_key_width"
+        android:layout_height="@dimen/black_key_height"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="8dp"
+        android:layout_toEndOf="@+id/key2"
+        android:clickable="true"
+        android:scaleType="fitXY"
+        android:src="@drawable/blackkey" />
+
+    <ImageView
+        android:id="@+id/key2"
+        android:layout_width="@dimen/black_key_width"
+        android:layout_height="@dimen/black_key_height"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="28dp"
+        android:clickable="true"
+        android:scaleType="fitXY"
+        android:src="@drawable/blackkey" />
+</RelativeLayout>

@@ -9,7 +9,7 @@
     tools:context="jp.local.yukichan.mmsp.activities.MainActivity">
 
     <android.support.v7.widget.Toolbar
-        android:id="@+id/tool_bar"
+        android:id="@+id/toolBar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="?attr/colorPrimary"
@@ -21,7 +21,7 @@
             android:layout_height="wrap_content">
 
             <Spinner
-                android:id="@+id/sp_scales"
+                android:id="@+id/spScales"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
@@ -30,40 +30,34 @@
 
     </android.support.v7.widget.Toolbar>
 
-    <!--<fragment-->
-    <!--android:id="@+id/fragment_display_selected_scale"-->
-    <!--android:name="jp.local.yukichan.mmsp.fragments.DisplaySelectedScaleFragment"-->
-    <!--android:layout_width="match_parent"-->
-    <!--android:layout_height="wrap_content" />-->
-
     <fragment
-        android:id="@+id/fragment_display_selected_code"
+        android:id="@+id/fragmentDisplaySelectedCode"
         android:name="jp.local.yukichan.mmsp.fragments.DisplaySelectedCodeFragment"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
     <fragment
-        android:id="@+id/fragment_histories"
+        android:id="@+id/fragmentHistories"
         android:name="jp.local.yukichan.mmsp.fragments.HistriesFragment"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
     <fragment
-        android:id="@+id/fragment_detected_code"
+        android:id="@+id/fragmentDetectedCode"
         android:name="jp.local.yukichan.mmsp.fragments.DetectedCodeFragment"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1" />
 
     <fragment
-        android:id="@+id/fragment_code_detail"
+        android:id="@+id/fragmentCodeDetail"
         android:name="jp.local.yukichan.mmsp.fragments.CodeDetailFragment"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1" />
 
     <fragment
-        android:id="@+id/fragment_keyboard"
+        android:id="@+id/fragmentKeyboard"
         android:name="jp.local.yukichan.mmsp.fragments.KeyboardFragment"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
